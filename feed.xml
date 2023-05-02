@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>etuardu</title>
+	<subtitle></subtitle>
+	<link href="https://etuardu.github.io/feed.xml" rel="self"/>
+	<link href="https://etuardu.github.io/"/>
+	
+	<updated>2015-05-15T02:00:00+02:00</updated>
+	
+	<id>https://etuardu.github.io</id>
+	<author>
+  <name>Edoardo Nannotti</name>
+  <email>edonan@gmail.com</email>
+	</author>
+	
+  
+  <entry>
+    <title>Let&#39;s make a map quiz game with Vue.js, SVG and CSS</title>
+    <link href="https://etuardu.github.io/posts/lets-make-a-map-quiz-game/"/>
+    <updated>2023-03-11T01:00:00+01:00</updated>
+    <id>https://etuardu.github.io/posts/lets-make-a-map-quiz-game/</id>
+    <content type="html"><![CDATA[
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/PUHDkzljYmw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<hr>
+<p>I while ago I needed a way to position markers on the image of a country according to GPS coordinates.
+The project mantainer had to update the markers from time to time, so I thought it would be interesting to
+put the coordinates directly in the image as data attributes and to set the positions with a bit of JavaScript:</p>
+<pre class="language-html"><code class="language-html"><span class="highlight-line"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>svg</span><span class="token punctuation">></span></span></span><br><span class="highlight-line">  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>g</span> <span class="token attr-name">data-lat</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>41.9028<span class="token punctuation">"</span></span> <span class="token attr-name">data-lng</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>12.4964<span class="token punctuation">"</span></span><span class="token punctuation">></span></span></span><br><span class="highlight-line">    <span class="token comment">&lt;!-- Rome --></span></span><br><span class="highlight-line">    …</span><br><span class="highlight-line">  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>g</span><span class="token punctuation">></span></span></span><br><span class="highlight-line"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>svg</span><span class="token punctuation">></span></span></span></code></pre>
+<p>For that purpose I made an helper tool I called <a href="https://etuardu.github.io/svgkremer/">svgkremer</a>,
+in honour of Gerhard Kremer, better known as Gerardus Mercator, the author of the famous cartographic projection.
+Its goal was to process geographic data, returning a sketched SVG about the area and the needed formulas to
+translate longitude and latitude into the x and y of that SVG.</p>
+<p>Recently I played around with SVG gradients and CSS animations in SVG and I thought I could use <code>svgkremer</code> to
+make a map quiz game. When I made <code>svgkremer</code> I only cared about translating from GPS to SVG coordinates, but for this
+game I also needed to translate the other way around, in order to calculate the distance between an already known
+location and the point clicked on the map. To do the math I used ChatGPT, which didn't fullfill this task as
+good as the other ones I gave it.</p>
+<p>In the YouTube video you can watch me building the game from start to finish. This is more a live screencast
+than a tutorial. I tried to explain the key points, and I've included chapters to make the navigation easier.
+Enjoy the video!</p>
+<h2>Links</h2>
+<ul>
+<li>Play the game: <a href="https://etuardu.github.io/map-quiz-svg/">Lithuanian cities quiz</a></li>
+<li>Source code: <a href="https://github.com/etuardu/map-quiz-svg">map-quiz-svg on GitHub</a></li>
+</ul>
+
+    ]]></content>
+  </entry>
+	
+  
+  <entry>
+    <title>Retevent, the event platform that shouldn&#39;t exist</title>
+    <link href="https://etuardu.github.io/posts/retevent-a-virtual-conference-platform/"/>
+    <updated>2023-02-25T01:00:00+01:00</updated>
+    <id>https://etuardu.github.io/posts/retevent-a-virtual-conference-platform/</id>
+    <content type="html"><![CDATA[
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/ddhp4_za8e8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<p>In the spring of 2020, working at <em>Edukácia@Internet</em>, we were still unaware that international events, one of the core fields
+of activity of the organization, would be such seriously affected by the COVID-19 pandemic.</p>
+<p>At that time we were getting ready to held the <a href="https://www.polyglotgathering.com">Polyglot Gathering</a>, expecting a few hundreds
+participants to come in May in Poland, but quickly became clear that the event has to be canceled.</p>
+<p>However, the team at <em>E@I</em> was determined to find a solution and virtualize the event.
+While existing platforms did not meet the specific needs of the event, a technology stack such as Google Firestore, Vue.js and Vuetify allowed
+even a small team like ours to create a conference platform from scratch in just a few weeks.</p>
+<p>The virtual Polyglot Gathering was successful, with positive feedback from participants.
+As the pandemic continued, the platform was used to hold other virtual events, such as the World Esperanto Congress 2020, which drew over 2,000 participants.
+The platform has continued to evolve with new features and has hosted a dozen international events to date.</p>
+<p>I'm happy to have been a part of that adventure, which will always remind me how challenges can be overcome with team-work and determination.</p>
+
+    ]]></content>
+  </entry>
+	
+  
+  <entry>
+    <title>Librokapto: a simple book catalogation app</title>
+    <link href="https://etuardu.github.io/posts/librokapto-a-simple-book-catalogation-app/"/>
+    <updated>2023-02-04T01:00:00+01:00</updated>
+    <id>https://etuardu.github.io/posts/librokapto-a-simple-book-catalogation-app/</id>
+    <content type="html"><![CDATA[
+      <p><a href="https://github.com/etuardu/librokapto">Librokapto</a> is an app I made for my own personal use,
+but I decided to share with anyone that might want to use it.</p>
+<p>I needed an app to organize my books for easy access. After conducting some research,
+I wasn't satisfied with the available options, and began contemplating the idea of creating my own app.</p>
+<p>My requirements were:</p>
+<ul>
+<li>simple two-coordinate addressing, e.g. <em>corridor bookcase, 3rd shelf</em>.</li>
+<li>light and easy to use on mobile.</li>
+<li>must be possible to acquire book information through ISBN scanning.</li>
+<li>the book catalog must be accessible from any device with internet acces
+without installing additional software.</li>
+</ul>
+<p>In such a scenario, storing the book catalog in Google Sheets would drastically decrease the complexity
+of the project. The app would just serve as a helper to add books to the catalog through ISBN
+scanning and provide a nice book search view. The user would directly use Google Sheets for the rest of
+the CRUD operations as well as sharing the catalog.</p>
+<h2>Getting the book information</h2>
+<p>Decoding a barcode in the browser using the camera is quite straighforward using <a href="https://serratus.github.io/quaggaJS/">quaggaJS</a>,
+a JavaScript barcode-scanner that is able to decode a wide range of barcodes, including EAN13, the one used to encode books ISBN numbers
+and many other things.</p>
+<p>Having a 13-digits ISBN code, it is possible to get book information using a public API by Google:</p>
+<pre class="language-sh"><code class="language-sh"><span class="highlight-line">GET https://www.googleapis.com/books/v1/volumes?q<span class="token operator">=</span>isbn:9780008144227</span></code></pre>
+<pre class="language-json"><code class="language-json"><span class="highlight-line"><span class="token punctuation">{</span></span><br><span class="highlight-line">  <span class="token property">"kind"</span><span class="token operator">:</span> <span class="token string">"books#volumes"</span><span class="token punctuation">,</span></span><br><span class="highlight-line">  <span class="token property">"totalItems"</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span></span><br><span class="highlight-line">  <span class="token property">"items"</span><span class="token operator">:</span> <span class="token punctuation">[</span></span><br><span class="highlight-line">    <span class="token punctuation">{</span></span><br><span class="highlight-line">      <span class="token property">"volumeInfo"</span><span class="token operator">:</span> <span class="token punctuation">{</span></span><br><span class="highlight-line">        <span class="token property">"title"</span><span class="token operator">:</span> <span class="token string">"The Alchemist"</span><span class="token punctuation">,</span></span><br><span class="highlight-line">        <span class="token property">"authors"</span><span class="token operator">:</span> <span class="token punctuation">[</span></span><br><span class="highlight-line">          <span class="token string">"Paulo Coelho"</span></span><br><span class="highlight-line">        <span class="token punctuation">]</span><span class="token punctuation">,</span></span><br><span class="highlight-line">        <span class="token property">"publisher"</span><span class="token operator">:</span> <span class="token string">"HarperThorsons"</span><span class="token punctuation">,</span></span><br><span class="highlight-line">        <span class="token property">"imageLinks"</span><span class="token operator">:</span> <span class="token punctuation">{</span></span><br><span class="highlight-line">          <span class="token property">"thumbnail"</span><span class="token operator">:</span> <span class="token string">"http://books.google.com/…"</span><span class="token punctuation">,</span></span><br><span class="highlight-line">          …</span></code></pre>
+<p>This API allows cross-origin requests, so it's fine to consume it client side from any domain.</p>
+<h2>Adding a book to the data store</h2>
+<p>Adding a book is done by appending a new line to Google Sheets.
+There are several ways to interact programmatically with Google Sheets.
+I chose to implement the append function in Google Apps Script and to
+expose that as a web service
+<a href="https://developers.google.com/apps-script/guides/web#deploy_a_script_as_a_web_app">deploying the script as a web app</a>.</p>
+<p>To handle POST requests, in my Google Apps Script I defined a <code>doPOST()</code>
+function. This is how an echo service would look like:</p>
+<pre class="language-js"><code class="language-js"><span class="highlight-line"><span class="token keyword">function</span> <span class="token function">doPost</span><span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token punctuation">{</span></span><br><span class="highlight-line">  <span class="token keyword">const</span> data <span class="token operator">=</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>e<span class="token punctuation">.</span>postData<span class="token punctuation">.</span>contents<span class="token punctuation">)</span></span><br><span class="highlight-line">  <span class="token keyword">return</span> ContentService<span class="token punctuation">.</span><span class="token function">createTextOutput</span><span class="token punctuation">(</span></span><br><span class="highlight-line">    <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token comment">// send the request back</span></span><br><span class="highlight-line">  <span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">setMimeType</span><span class="token punctuation">(</span></span><br><span class="highlight-line">    ContentService<span class="token punctuation">.</span>MimeType<span class="token punctuation">.</span><span class="token constant">JSON</span></span><br><span class="highlight-line">  <span class="token punctuation">)</span><span class="token punctuation">;</span></span><br><span class="highlight-line"><span class="token punctuation">}</span></span></code></pre>
+<p>Now sending POST requests to the deployment endpoint is possible
+to see the data getting echoed:</p>
+<pre class="language-sh"><code class="language-sh"><span class="highlight-line">POST https://script.google.com/macros/s/…/exec</span><br><span class="highlight-line"><span class="token punctuation">{</span><span class="token string">"hello"</span><span class="token builtin class-name">:</span><span class="token string">"world"</span><span class="token punctuation">}</span></span></code></pre>
+<pre class="language-json"><code class="language-json"><span class="highlight-line"><span class="token punctuation">{</span></span><br><span class="highlight-line">  <span class="token property">"parameters"</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span></span><br><span class="highlight-line">  <span class="token property">"parameter"</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span></span><br><span class="highlight-line">  <span class="token property">"queryString"</span><span class="token operator">:</span> <span class="token string">""</span><span class="token punctuation">,</span></span><br><span class="highlight-line">  <span class="token property">"postData"</span><span class="token operator">:</span> <span class="token punctuation">{</span></span><br><span class="highlight-line">    <span class="token property">"contents"</span><span class="token operator">:</span> <span class="token string">"{\"hello\":\"world\"}"</span><span class="token punctuation">,</span></span><br><span class="highlight-line">    <span class="token property">"length"</span><span class="token operator">:</span> <span class="token number">17</span><span class="token punctuation">,</span></span><br><span class="highlight-line">    <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"postData"</span><span class="token punctuation">,</span></span><br><span class="highlight-line">    <span class="token property">"type"</span><span class="token operator">:</span> <span class="token string">"text/plain"</span></span><br><span class="highlight-line">  <span class="token punctuation">}</span><span class="token punctuation">,</span></span><br><span class="highlight-line">  <span class="token property">"contentLength"</span><span class="token operator">:</span> <span class="token number">17</span><span class="token punctuation">,</span></span><br><span class="highlight-line">  <span class="token property">"contextPath"</span><span class="token operator">:</span> <span class="token string">""</span></span><br><span class="highlight-line"><span class="token punctuation">}</span></span></code></pre>
+<p>In my <code>doPost()</code> function I parse the JSON in <code>e.postData.contents</code>
+to read the received book data and append it to the sheet.</p>
+<h2>Retrieving the book catalog</h2>
+<p>To retrieve the whole catalog, I needed a way to get the content of
+a Google Sheet using JavaScript.
+While I could implement a <code>doGet()</code> function in the aforementioned
+Google Apps Script, I decided to retrieve the content of the sheet
+in another way, using the
+<a href="https://developers.google.com/chart/interactive/docs/querylanguage#setting-the-query-in-the-data-source-url">Google Visualization Query</a>.
+Its advantages are that it's not quota based, has a lower
+latency and does not require the implementation of a custom function.</p>
+<p>It is possible to build the url for the query as such:</p>
+<pre class="language-js"><code class="language-js"><span class="highlight-line"><span class="token comment">// gsheet_url = 'https://docs.google.com/spreadsheets/d/…/edit#gid=0'</span></span><br><span class="highlight-line"><span class="token keyword">const</span> gviz_url <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">URL</span><span class="token punctuation">(</span><span class="token string">'gviz/tq'</span><span class="token punctuation">,</span> gsheet_url<span class="token punctuation">)</span></span><br><span class="highlight-line">gviz_url<span class="token punctuation">.</span>searchParams<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span><span class="token string">'gid'</span><span class="token punctuation">,</span> <span class="token string">'0'</span><span class="token punctuation">)</span> <span class="token comment">// sheet index</span></span><br><span class="highlight-line">gviz_url<span class="token punctuation">.</span>searchParams<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span><span class="token string">'tq'</span><span class="token punctuation">,</span> <span class="token string">'SELECT A,B,C'</span><span class="token punctuation">)</span></span></code></pre>
+<p>A GET request to that URL would result in a response such as:</p>
+<pre class="language-js"><code class="language-js"><span class="highlight-line"><span class="token comment">/*O_o*/</span></span><br><span class="highlight-line">google<span class="token punctuation">.</span>visualization<span class="token punctuation">.</span>Query<span class="token punctuation">.</span><span class="token function">setResponse</span><span class="token punctuation">(</span><span class="token punctuation">{</span></span><br><span class="highlight-line">  …</span><br><span class="highlight-line">  <span class="token string-property property">"table"</span><span class="token operator">:</span><span class="token punctuation">{</span></span><br><span class="highlight-line">    <span class="token string-property property">"cols"</span><span class="token operator">:</span><span class="token punctuation">[</span> … <span class="token punctuation">]</span><span class="token punctuation">,</span></span><br><span class="highlight-line">    <span class="token string-property property">"rows"</span><span class="token operator">:</span><span class="token punctuation">[</span></span><br><span class="highlight-line">      <span class="token punctuation">{</span></span><br><span class="highlight-line">        <span class="token string-property property">"c"</span><span class="token operator">:</span><span class="token punctuation">[</span></span><br><span class="highlight-line">          <span class="token punctuation">{</span><span class="token string-property property">"v"</span><span class="token operator">:</span><span class="token string">"first cell"</span><span class="token punctuation">}</span><span class="token punctuation">,</span></span><br><span class="highlight-line">          <span class="token punctuation">{</span><span class="token string-property property">"v"</span><span class="token operator">:</span><span class="token string">"second cell"</span><span class="token punctuation">}</span><span class="token punctuation">,</span></span><br><span class="highlight-line">          <span class="token punctuation">{</span><span class="token string-property property">"v"</span><span class="token operator">:</span><span class="token string">"third cell"</span><span class="token punctuation">}</span></span><br><span class="highlight-line">        <span class="token punctuation">]</span><span class="token punctuation">,</span></span><br><span class="highlight-line">      <span class="token punctuation">}</span><span class="token punctuation">,</span></span><br><span class="highlight-line">      …</span><br><span class="highlight-line"><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span></code></pre>
+<p>Note that the response is not JSON but JavaScript code, since
+it is supposed to be used with the
+<a href="https://developers.google.com/chart/interactive/docs/basic_load_libs">Google Chart SDK</a>.
+Anyway, the argument of the <code>setResponse()</code> method is valid JSON and
+may be parsed without importing the Google Chart library, being aware
+that its structure may change in the future.</p>
+<h2>Wrapping up</h2>
+<p>Every API used in this project is CORS enabled. This allows the app
+to run entirely on the browser, sparing the need to build a backend
+and the round trip time that goes with that at each request.</p>
+<p>The user settings such as the Google Sheets catalog URL are stored
+on the device using IndexedDB.</p>
+<p>I spent some time designing the UI for the book insertion page,
+since I think it's crucial to have a good flow when scanning and
+saving a series of books.
+The final decision was to have a floating action button that
+toggles between &quot;scan&quot; and &quot;save&quot; depending on the book title
+field being filled or not. A progress bar is placed on the top
+of the form, and its background color reflects the one of the
+floating action button, so that the user can see what the
+current state is even when the onscreen keyboard overlaps
+the floating action button.</p>
+<p>The result is a simple web app that just does its job giving a
+pleasant user experience.</p>
+<p>Check out the <a href="https://github.com/etuardu/librokapto">Librokapto GitHub repository</a>.</p>
+<p>You can see Librokapto in action here:</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NDKk5wOUHcM?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    ]]></content>
+  </entry>
+	
+  
+  <entry>
+    <title>Cheating in a drawing game with Python</title>
+    <link href="https://etuardu.github.io/posts/cheating-in-a-drawing-game-using-python/"/>
+    <updated>2022-11-23T01:00:00+01:00</updated>
+    <id>https://etuardu.github.io/posts/cheating-in-a-drawing-game-using-python/</id>
+    <content type="html"><![CDATA[
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/TNXOH6ql4fA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<p><a href="https://garticphone.com">Gartic Phone</a> is an online game that combines Pictionary with the Telephone game. In the game,
+players take turns drawing a word or sentence and guessing what others have drawn. Players use their mouse or a tablet-pen
+to draw on the screen.</p>
+<p>I had some fun making a python program that simulates mouse events, just for the sake of impressing my friends with perfectly
+drawn geometrical shapes, which is quite a challege if done by hand.</p>
+<h2>Converting SVG paths to lists of points</h2>
+<p>I used the <code>svgpathtools</code> library to read an SVG image file and convert its paths into lists of points.
+Straight lines between these points would be an approximation of the path curves, and the point density
+can be adjusted in the <code>SAMPLES_PER_PX</code> variable.</p>
+<pre class="language-python"><code class="language-python"><span class="highlight-line"><span class="token keyword">def</span> <span class="token function">svg_to_lines</span><span class="token punctuation">(</span>img<span class="token punctuation">)</span><span class="token punctuation">:</span></span><br>  <span class="token triple-quoted-string string">"""Read an svg file and calculate a list of points (x, y) for each path found.<br><span class="highlight-line">  Return a list of lists.</span><br>  """</span><br><span class="highlight-line"></span><br><span class="highlight-line">  SAMPLES_PER_PX <span class="token operator">=</span> <span class="token number">0.3</span></span><br><span class="highlight-line"></span><br><span class="highlight-line">  paths<span class="token punctuation">,</span> attributes<span class="token punctuation">,</span> svg_attr <span class="token operator">=</span> svgpathtools<span class="token punctuation">.</span>svg2paths2<span class="token punctuation">(</span>img<span class="token punctuation">)</span></span><br><span class="highlight-line"></span><br><span class="highlight-line">  lines <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span></span><br><span class="highlight-line"></span><br><span class="highlight-line">  <span class="token keyword">for</span> path <span class="token keyword">in</span> paths<span class="token punctuation">:</span></span><br><span class="highlight-line">    amount <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span>path<span class="token punctuation">.</span>length<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span> SAMPLES_PER_PX<span class="token punctuation">)</span></span><br><span class="highlight-line">    points <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span></span><br><span class="highlight-line">    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>amount<span class="token punctuation">)</span><span class="token punctuation">:</span></span><br><span class="highlight-line">      <span class="token keyword">try</span><span class="token punctuation">:</span></span><br><span class="highlight-line">        point <span class="token operator">=</span> path<span class="token punctuation">.</span>point<span class="token punctuation">(</span>path<span class="token punctuation">.</span>ilength<span class="token punctuation">(</span>path<span class="token punctuation">.</span>length<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span> i <span class="token operator">/</span> <span class="token punctuation">(</span>amount<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span></span><br><span class="highlight-line">        points<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token builtin">int</span><span class="token punctuation">(</span>point<span class="token punctuation">.</span>real<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">int</span><span class="token punctuation">(</span>point<span class="token punctuation">.</span>imag<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span></span><br><span class="highlight-line">      <span class="token keyword">except</span><span class="token punctuation">:</span></span><br><span class="highlight-line">        <span class="token keyword">pass</span></span><br><span class="highlight-line">    lines<span class="token punctuation">.</span>append<span class="token punctuation">(</span>points<span class="token punctuation">)</span></span><br><span class="highlight-line"></span><br><span class="highlight-line">  <span class="token keyword">return</span> lines</span></code></pre>
+<h2>Emulating Mouse Events Using PyAutoGUI</h2>
+<p>Having our SVG read and converted to a list of points, we can start emulating mouse events.
+To do this, I used the <code>pyautogui</code> library, which provides a cross-platform interface for simulating mouse and keyboard events.</p>
+<p>The main drawing logic of the program is a loop that iterates through each line of points generated by the <code>svg_to_lines</code> function.
+It moves the mouse to the first point of the line, presses the mouse down, moves the mouse to each subsequent point, and releases the mouse.
+The <code>time.sleep</code> function is used to introduce a delay between each line to allow the browser to render the lines.</p>
+<pre class="language-python"><code class="language-python"><span class="highlight-line"><span class="token keyword">for</span> n<span class="token punctuation">,</span> line <span class="token keyword">in</span> <span class="token builtin">enumerate</span><span class="token punctuation">(</span>lines<span class="token punctuation">)</span><span class="token punctuation">:</span></span><br><span class="highlight-line">    pyautogui<span class="token punctuation">.</span>moveTo<span class="token punctuation">(</span><span class="token operator">*</span>line<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span></span><br><span class="highlight-line">    pyautogui<span class="token punctuation">.</span>mouseDown<span class="token punctuation">(</span><span class="token punctuation">)</span></span><br><span class="highlight-line">    <span class="token keyword">for</span> i<span class="token punctuation">,</span> point <span class="token keyword">in</span> <span class="token builtin">enumerate</span><span class="token punctuation">(</span>line<span class="token punctuation">)</span><span class="token punctuation">:</span></span><br><span class="highlight-line">      <span class="token keyword">if</span> i <span class="token operator">%</span> <span class="token number">2</span> <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">:</span></span><br><span class="highlight-line">        <span class="token keyword">continue</span></span><br><span class="highlight-line">      pyautogui<span class="token punctuation">.</span>moveTo<span class="token punctuation">(</span><span class="token operator">*</span>point<span class="token punctuation">)</span></span><br><span class="highlight-line">    pyautogui<span class="token punctuation">.</span>mouseUp<span class="token punctuation">(</span><span class="token punctuation">)</span></span><br><span class="highlight-line">    time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">0.3</span><span class="token punctuation">)</span></span></code></pre>
+<h2>Wrapping up</h2>
+<p>In the video, you can see how the program transferred an image created in Inkscape to Gartic Phone.
+Did this serve any practical purpose? Perhaps not, but it certainly provided me with some entertainment as I caught my friends off guard
+with my precise shapes. Moreover, the process of developing the program was a stimulating challenge that I thoroughly enjoyed!</p>
+
+    ]]></content>
+  </entry>
+	
+  
+  <entry>
+    <title>I turned a legacy dictionary software into a Telegram bot: hVortaroBot</title>
+    <link href="https://etuardu.github.io/posts/hvortaro-telegram-bot/"/>
+    <updated>2020-04-21T02:00:00+02:00</updated>
+    <id>https://etuardu.github.io/posts/hvortaro-telegram-bot/</id>
+    <content type="html"><![CDATA[
+      <h1>hVortaro</h1>
+<p>The dictionary is called <a href="http://www.esperanto.it/hvortaro">hVortaro</a>, it is an Italian-Esperanto
+dictionary and is available in both a web version and a desktop version.</p>
+<p>To build the Telegram bot, I decided to use the dictionary data which comes with the desktop version,
+so I downloaded it from <a href="http://www.esperanto.it/hvortaro/programo.php">this page</a>, where the publisher,
+quite conveniently, also provides links to download only the data files without the application.</p>
+<p>The zip file I download contained two files with not well known extensions, so I used the <code>file</code> command
+to try to determine the file types:</p>
+<pre class="language-bash"><code class="language-bash"><span class="highlight-line">$ <span class="token function">file</span> itaesps.*</span><br><span class="highlight-line">itaesps.bin: data</span><br><span class="highlight-line">itaesps.idx: data</span></code></pre>
+<p>Unfortunately it didn't help much, so further investigation was required.</p>
+<p>I noticed that the file <code>itaesps.idx</code> (1.8 Mb) was much smaller than <code>itaesps.bin</code> (9.2 Mb).
+Both its size and extension suggested that it may be an index, and this can be confirmed looking for
+readable text in it:</p>
+<pre class="language-bash"><code class="language-bash"><span class="highlight-line">$ strings itaesps.idx <span class="token operator">|</span> <span class="token function">less</span></span><br><span class="highlight-line">La divinis<span class="token operator">|</span></span><br><span class="highlight-line">a fortiori<span class="token operator">|</span></span><br><span class="highlight-line">a gogo<span class="token operator">|</span></span><br><span class="highlight-line">a jour<span class="token operator">|</span></span><br><span class="highlight-line">Aa la belle etoile<span class="token operator">|</span></span><br><span class="highlight-line">oa la coque<span class="token operator">|</span></span><br><span class="highlight-line">a la page<span class="token operator">|</span></span><br><span class="highlight-line">Wa latere<span class="token operator">|</span></span><br><span class="highlight-line">…</span></code></pre>
+<p>This appears to be a list of terms: <em>a divinis, a fortiori, a gogo, a la belle etoile, a la coque,
+a la pace, a latere</em>…</p>
+<p>On the other hand, <code>itaesps.bin</code> contains the definitions, starting with the one for the term <em>a</em>:</p>
+<pre class="language-bash"><code class="language-bash"><span class="highlight-line">$ strings itaesps.bin <span class="token operator">|</span> <span class="token function">less</span></span><br><span class="highlight-line">a <span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token comment">#</span></span><br><span class="highlight-line">s.f.</span><br><span class="highlight-line">a come Adamo</span><br><span class="highlight-line">a kiel Adamo<span class="token comment">#</span></span><br><span class="highlight-line">dall'a alla zeta</span><br><span class="highlight-line">de a</span><br><span class="highlight-line">is zo<span class="token comment">#</span></span><br><span class="highlight-line">a <span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token comment">#</span></span><br><span class="highlight-line">prep.<span class="token comment">#</span></span><br><span class="highlight-line"><span class="token punctuation">(</span>compl. di termine<span class="token punctuation">)</span></span><br><span class="highlight-line">parla a tuo padre</span><br><span class="highlight-line">parolu al via patro<span class="token comment">#</span></span><br><span class="highlight-line">…</span></code></pre>
+<h2>Decoding the index</h2>
+<p>Going back to <code>itaesps.idx</code> and inspecting its content:</p>
+<pre class="language-bash"><code class="language-bash"><span class="highlight-line">$ hexdump <span class="token parameter variable">-C</span> itaesps.idx <span class="token operator">|</span> <span class="token function">less</span></span><br><span class="highlight-line">00000000  <span class="token number">23</span> 00 00 00 01 <span class="token number">61</span> 7c a3  00 00 1b 4c <span class="token number">61</span> <span class="token number">20</span> <span class="token number">64</span> <span class="token number">69</span>  <span class="token operator">|</span><span class="token comment">#....a|....La di|</span></span><br><span class="highlight-line">00000010  <span class="token number">76</span> <span class="token number">69</span> 6e <span class="token number">69</span> <span class="token number">73</span> 7c a3 00  00 1b ba <span class="token number">61</span> <span class="token number">20</span> <span class="token number">66</span> 6f <span class="token number">72</span>  <span class="token operator">|</span>vinis<span class="token operator">|</span><span class="token punctuation">..</span><span class="token punctuation">..</span>.a <span class="token keyword">for</span><span class="token operator">|</span></span><br><span class="highlight-line">00000020  <span class="token number">74</span> <span class="token number">69</span> 6f <span class="token number">72</span> <span class="token number">69</span> 7c a3 00  00 1b eb <span class="token number">61</span> <span class="token number">20</span> <span class="token number">67</span> 6f <span class="token number">67</span>  <span class="token operator">|</span>tiori<span class="token operator">|</span><span class="token punctuation">..</span><span class="token punctuation">..</span>.a gog<span class="token operator">|</span></span><br><span class="highlight-line">00000030  6f 7c a3 00 00 1c 1c <span class="token number">61</span>  <span class="token number">20</span> 6a 6f <span class="token number">75</span> <span class="token number">72</span> 7c a3 00  <span class="token operator">|</span>o<span class="token operator">|</span><span class="token punctuation">..</span><span class="token punctuation">..</span>.a jour<span class="token operator">|</span><span class="token punctuation">..</span><span class="token operator">|</span></span><br><span class="highlight-line">…</span><br><span class="highlight-line">001b3030  a3 00 <span class="token number">92</span> b1 1d 7a <span class="token number">75</span> <span class="token number">72</span>  <span class="token number">69</span> <span class="token number">67</span> 6f 7c 5e 00 <span class="token number">92</span> b1  <span class="token operator">|</span><span class="token punctuation">..</span><span class="token punctuation">..</span>.zurigo<span class="token operator">|</span>^<span class="token punctuation">..</span>.<span class="token operator">|</span></span><br><span class="highlight-line">001b3040  <span class="token number">40</span> 7a <span class="token number">75</span> <span class="token number">72</span> <span class="token number">69</span> 6b 6f 7c  a3 00 <span class="token number">92</span> b1 <span class="token number">63</span> 7a <span class="token number">75</span> 7a  <span class="token operator">|</span>@zuriko<span class="token operator">|</span><span class="token punctuation">..</span><span class="token punctuation">..</span>czuz<span class="token operator">|</span></span><br><span class="highlight-line">001b3050  7a <span class="token number">65</span> <span class="token number">72</span> <span class="token number">65</span> 6c 6c 6f 6e  <span class="token number">65</span> 7c                    <span class="token operator">|</span>zerellone<span class="token operator">||</span></span></code></pre>
+<p>One can notice that it starts with the term <em>a</em> and follows this pattern:</p>
+<ul>
+<li>Each term is followed by a pipe <code>|</code> (0x7c).</li>
+<li>Each term is preceded by 5 bytes.</li>
+</ul>
+<p>Looking at the 5 byte block, it seems that its last 4 bytes contain an increasing
+value:</p>
+<ul>
+<li><code>00 00 00 01</code> — <em>a</em></li>
+<li><code>00 00 1b 4c</code> — <em>a divinis</em></li>
+<li><code>00 00 1b ba</code> — <em>a fortiori</em></li>
+<li>…</li>
+<li><code>00 92 b1 40</code> — <em>zuriko</em></li>
+<li><code>00 92 b1 63</code> — <em>zuzzerellone</em></li>
+</ul>
+<p>Using this value as a byte offset for <code>itaesps.bin</code> the corresponding
+definitions are found. For example, for <em>a fortiori</em> (0x1bba):</p>
+<pre class="language-bash"><code class="language-bash"><span class="highlight-line">$ hexdump <span class="token parameter variable">-C</span> itaesps.bin <span class="token parameter variable">-s</span> 0x1bba <span class="token operator">|</span> <span class="token function">less</span></span><br><span class="highlight-line">00001bba  00 2d 00 a4 <span class="token number">61</span> <span class="token number">20</span> <span class="token number">66</span> 6f  <span class="token number">72</span> <span class="token number">74</span> <span class="token number">69</span> 6f <span class="token number">72</span> <span class="token number">69</span> <span class="token number">23</span> ac  <span class="token operator">|</span>.-<span class="token punctuation">..</span>a fortiori<span class="token comment">#.|</span></span><br><span class="highlight-line">00001bca  <span class="token number">28</span> 6c <span class="token number">61</span> <span class="token number">74</span> 2e <span class="token number">29</span> <span class="token number">23</span> a7  6c 2e <span class="token number">61</span> <span class="token number">76</span> 2e b4 <span class="token number">64</span> <span class="token number">65</span>  <span class="token operator">|</span><span class="token punctuation">(</span>lat.<span class="token punctuation">)</span><span class="token comment">#.l.av..de|</span></span><br><span class="highlight-line">00001bda  <span class="token number">73</span> <span class="token number">20</span> <span class="token number">70</span> 6c <span class="token number">69</span> 2c b4 <span class="token number">74</span>  <span class="token number">69</span> 6f 6d <span class="token number">20</span> <span class="token number">70</span> 6c <span class="token number">69</span> <span class="token number">23</span>  <span class="token operator">|</span>s pli,.tiom pli<span class="token comment">#|</span></span><br><span class="highlight-line">00001bea  08 00 2d 00 a4 e0 <span class="token number">20</span> <span class="token number">67</span>  6f <span class="token number">67</span> 6f <span class="token number">23</span> ac <span class="token number">28</span> <span class="token number">66</span> <span class="token number">72</span>  <span class="token operator">|</span><span class="token punctuation">..</span>-<span class="token punctuation">..</span>. gogo<span class="token comment">#.(fr|</span></span><br><span class="highlight-line">00001bfa  2e <span class="token number">29</span> <span class="token number">23</span> a7 6c 2e <span class="token number">61</span> <span class="token number">76</span>  2e b4 <span class="token number">70</span> 6c <span class="token number">65</span> 6e <span class="token number">61</span> <span class="token number">62</span>  <span class="token operator">|</span><span class="token builtin class-name">.</span><span class="token punctuation">)</span><span class="token comment">#.l.av..plenab|</span></span><br><span class="highlight-line">00001c0a  <span class="token number">75</span> 6e <span class="token number">64</span> <span class="token number">65</span> 2c b4 <span class="token number">70</span> 6c  <span class="token number">65</span> 6a <span class="token number">61</span> <span class="token number">62</span> <span class="token number">75</span> 6e <span class="token number">64</span> <span class="token number">65</span>  <span class="token operator">|</span>unde,.plejabunde<span class="token operator">|</span></span><br><span class="highlight-line">…</span></code></pre>
+<p>I used this information in my app to load the index in ram as a hash table (a python dictionary).
+Of course one could skip this file altogether and directly use the content of <code>itaesps.bin</code> to
+populate a database of some sort, but I preferred to use those files themselves as data source.
+This approach allows me to update the data just by replacing these two files with their eventual new version
+in the case of a dictionary upgrade.</p>
+<h2>Decoding the content</h2>
+<p>First of all, I tried to detect the charset getting a chunk of text free from markup or control characters for inspection:</p>
+<pre class="language-bash"><code class="language-bash"><span class="highlight-line">$ hexdump <span class="token parameter variable">-C</span> itaesps.bin <span class="token operator">|</span> <span class="token function">less</span></span><br><span class="highlight-line">…</span><br><span class="highlight-line">000dd680  e8 <span class="token number">20</span> <span class="token number">75</span> 6e <span class="token number">61</span> <span class="token number">20</span> <span class="token number">62</span> <span class="token number">65</span>  6c 6c e9 7a 7a <span class="token number">61</span> a5 <span class="token number">73</span>  <span class="token operator">|</span><span class="token builtin class-name">.</span> una bell.zza.s<span class="token operator">|</span></span><br><span class="highlight-line">000dd690  <span class="token number">75</span> <span class="token number">72</span> <span class="token number">20</span> 6c <span class="token number">61</span> <span class="token number">20</span> <span class="token number">61</span> 8b  <span class="token number">74</span> 6f <span class="token number">89</span> 6f <span class="token number">73</span> <span class="token number">65</span> 6f <span class="token number">20</span>  <span class="token operator">|</span>ur la a.to.oseo <span class="token operator">|</span></span><br><span class="highlight-line">000dd6a0  6f 6e <span class="token number">69</span> <span class="token number">20</span> 6b <span class="token number">75</span> <span class="token number">72</span> <span class="token number">61</span>  <span class="token number">73</span> <span class="token number">20</span> <span class="token number">70</span> 6c <span class="token number">65</span> 6e <span class="token number">83</span> <span class="token number">75</span>  <span class="token operator">|</span>oni kuras plen.u<span class="token operator">|</span></span><br><span class="highlight-line">000dd6b0  <span class="token number">65</span> <span class="token number">23</span> a9 <span class="token number">61</span> <span class="token number">20</span> <span class="token number">63</span> <span class="token number">61</span> <span class="token number">73</span>  <span class="token number">61</span> <span class="token number">20</span> <span class="token number">74</span> <span class="token number">75</span> <span class="token number">61</span> <span class="token number">20</span> <span class="token number">73</span> <span class="token number">69</span>  <span class="token operator">|</span>e<span class="token comment">#.a casa tua si|</span></span><br><span class="highlight-line">…</span></code></pre>
+<p>Comparing this with the <a href="http://www.esperanto.it/hvortaro/trova.php?bellezza">web version</a> of the definition,
+I know that the text starting at 0xdd68f and ending at 0xdd6b1 should be decoded as <em>&quot;sur la aŭtoŝoseo oni kuras plenĝue&quot;</em>.
+This text is a good specimen because it contains several non ASCII characters (<em>ŭ</em>, <em>ŝ</em>, <em>ĝ</em>).
+I put this text in a new file and used the <code>file</code> command to detect its charset:</p>
+<pre class="language-bash"><code class="language-bash"><span class="highlight-line">$ <span class="token function">dd</span> <span class="token assign-left variable">if</span><span class="token operator">=</span>itaesps.bin <span class="token assign-left variable">bs</span><span class="token operator">=</span><span class="token number">1</span> <span class="token assign-left variable">skip</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$((</span><span class="token number">0xdd68f</span><span class="token variable">))</span></span> <span class="token assign-left variable">count</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$((</span><span class="token number">0xdd6b1</span> <span class="token operator">-</span> <span class="token number">0xdd68f</span><span class="token variable">))</span></span> <span class="token assign-left variable">of</span><span class="token operator">=</span>test.txt</span><br><span class="highlight-line"><span class="token number">34</span>+0 records <span class="token keyword">in</span></span><br><span class="highlight-line"><span class="token number">34</span>+0 records out</span><br><span class="highlight-line"><span class="token number">34</span> bytes copied, <span class="token number">0,00725953</span> s, <span class="token number">4,7</span> kB/s</span><br><span class="highlight-line">$ <span class="token function">file</span> <span class="token parameter variable">-i</span> test.txt</span><br><span class="highlight-line">test.txt: text/plain<span class="token punctuation">;</span> <span class="token assign-left variable">charset</span><span class="token operator">=</span>unknown-8bit</span></code></pre>
+<p>Unfortunately, it seems that no standard charset was used, so I had to build a lookup table to decode the
+custom charset to utf-8. This was a bit tedious, but not hard. It was just a matter of comparing the encoded
+text with the one readable in the web version of the dictionary.</p>
+<p>Decoding the rest of the format, such as control characters with special meanings (quotation, example, pronunciation, etc.),
+was done in the same way.</p>
+<p>When I had what I needed to get the definitions for any desired terms, I wrapped everything in a python module and moved forward
+to build the bot.</p>
+<h1>hVortaroBot</h1>
+<p>To build the bot I used the <a href="https://github.com/python-telegram-bot/python-telegram-bot">python-telegram-bot</a> python library.</p>
+<p>Apart from giving the definition for the prompted term, the bot supports the following commands:</p>
+<ul>
+<li><code>/casuale</code> — Get the definition of a random term</li>
+<li><code>/impiccato</code> — Play the hangman</li>
+<li><code>/quiz</code> — Play a trivia quiz</li>
+<li><code>/annulla</code> — Cancel the running operation</li>
+<li><code>/aiuto</code> — Get usage information</li>
+</ul>
+<p>Check it out here: <a href="https://t.me/hVortaroBot">@hVortaroBot</a></p>
+<p>You can see the bot in action in this video:</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/YsFL2vvOgKw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+    ]]></content>
+  </entry>
+	
+  
+  <entry>
+    <title>Cheating in a word game using Python</title>
+    <link href="https://etuardu.github.io/posts/cheating-in-a-word-game-using-python/"/>
+    <updated>2015-11-13T01:00:00+01:00</updated>
+    <id>https://etuardu.github.io/posts/cheating-in-a-word-game-using-python/</id>
+    <content type="html"><![CDATA[
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/5bJProAb3VE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<p>Ruzzle is a popular mobile game, where players must swipe across a 4x4 grid of letters to find as many words as possible.</p>
+<p>I thought it was a nice challenge for a developer to build a program able to play it. I used a Python library to compare image similarity to read the letters (simpler setup than OCR) and try to walk the resulting graph using entries from a word list, previously ordered from longest to shortest to score more points. For each possible found path, a mouse emulation library was used to simulate the mouse dragging across the grid.</p>
+
+    ]]></content>
+  </entry>
+	
+  
+  <entry>
+    <title>The air of Lecce: visualizing air quality data</title>
+    <link href="https://etuardu.github.io/posts/lariadilecce-a-webapp-about-air-quality/"/>
+    <updated>2015-05-15T02:00:00+02:00</updated>
+    <id>https://etuardu.github.io/posts/lariadilecce-a-webapp-about-air-quality/</id>
+    <content type="html"><![CDATA[
+      <p>Recently, I stumbled upon the
+<a href="http://dati.comune.lecce.it/blog/?p=114">Lecce Open Data Contest</a>, a competition for developers to create
+innovative apps using public data released by the Municipality of Lecce.</p>
+<p>Open data is openly accessible data, shared under an open license, which is a fantastic initiative by the municipality
+to increase transparency and encourage citizen participation.</p>
+<p>I decided to participate in the contest with a web application that provides an interactive and animated visualization
+of the latest air quality data of the city of Lecce using the open data issued by the municipality.
+The web app features an analog-style display that shows the current pollution levels in relation to the set limits,
+and users can explore data from various monitoring stations.</p>
+<p>My goal was for the final product to not only be informative but also visually appealing,
+featuring a pleasant color palette and a stylized representation of the historical city center of Lecce.</p>
+<p>To make this web app, I used python to fetch the latest data from the <a href="http://dati.comune.lecce.it/">portal</a> and
+<a href="http://snapsvg.io">Snap</a> for the Svg animations.</p>
+<p>I'm happy to have participated in the contest and built something nice!</p>
+<p>The app is available at <a href="http://lariadilecce.undo.it/#en">lariadilecce.undo.it</a>.</p>
+
+    ]]></content>
+  </entry>
+	
+</feed>
