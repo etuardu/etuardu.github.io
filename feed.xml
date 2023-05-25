@@ -22,16 +22,12 @@
     <content type="html"><![CDATA[
       <iframe width="560" height="315" src="https://www.youtube.com/embed/PUHDkzljYmw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 <hr>
-<p>I while ago I needed a way to position markers on the image of a country according to GPS coordinates.
-The project mantainer had to update the markers from time to time, so I thought it would be interesting to
-put the coordinates directly in the image as data attributes and to set the positions with a bit of JavaScript:</p>
+<p>Recently I was playing around with SVG gradients and CSS animations in SVG and I thought I could use
+<a href="https://etuardu.github.io/svgkremer/">svgkremer</a> to make a map quiz game.</p>
+<p><code>svgkremer</code> is a Python program I made a while ago to map the SVG space to the GPS coordinates of a geographic area,
+so that you can place elements on a SVG map image having their coordinates as data attributes:</p>
 <pre class="language-html"><code class="language-html"><span class="highlight-line"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>svg</span><span class="token punctuation">></span></span></span><br><span class="highlight-line">  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>g</span> <span class="token attr-name">data-lat</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>41.9028<span class="token punctuation">"</span></span> <span class="token attr-name">data-lng</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>12.4964<span class="token punctuation">"</span></span><span class="token punctuation">></span></span></span><br><span class="highlight-line">    <span class="token comment">&lt;!-- Rome --></span></span><br><span class="highlight-line">    …</span><br><span class="highlight-line">  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>g</span><span class="token punctuation">></span></span></span><br><span class="highlight-line"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>svg</span><span class="token punctuation">></span></span></span></code></pre>
-<p>For that purpose I made an helper tool I called <a href="https://etuardu.github.io/svgkremer/">svgkremer</a>,
-in honour of Gerhard Kremer, better known as Gerardus Mercator, the author of the famous cartographic projection.
-Its goal was to process geographic data, returning a sketched SVG about the area and the needed formulas to
-translate longitude and latitude into the x and y of that SVG.</p>
-<p>Recently I played around with SVG gradients and CSS animations in SVG and I thought I could use <code>svgkremer</code> to
-make a map quiz game. When I made <code>svgkremer</code> I only cared about translating from GPS to SVG coordinates, but for this
+<p>When I made <code>svgkremer</code> I only cared about translating from GPS to SVG coordinates, but for this
 game I also needed to translate the other way around, in order to calculate the distance between an already known
 location and the point clicked on the map. To do the math I used ChatGPT, which didn't fullfill this task as
 good as the other ones I gave it.</p>
